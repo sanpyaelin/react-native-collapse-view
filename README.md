@@ -1,6 +1,5 @@
 # react-native-collapse-view
 
-## Screen Shot
 
 <img src="https://raw.githubusercontent.com/sanpyaelin/react-native-collapse-view/master/images/demo.gif" width="200"> 
 
@@ -27,7 +26,7 @@ import CollapsingToolbar from 'react-native-collapse-view';
     );
   }
 ```
-##Example
+## Example
 
 Check full example in the [example](https://github.com/sanpyaelin/react-native-collapse-view/blob/master/example/index.js) folder.
 
