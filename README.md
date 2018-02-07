@@ -15,16 +15,11 @@ Import the component:
 ```js
 import CollapsingToolbar from 'react-native-collapse-view';
 
-  render() {
-    return (
-    <View style={styles.container}>
-      <CollapseView 
-        renderView={this._renderView}
-        renderCollapseView={this._renderCollapseView}
-      />
-    </View>
-    );
-  }
+
+<CollapseView 
+  renderView={this._renderView}
+  renderCollapseView={this._renderCollapseView}
+/>
 ```
 ## Example
 
