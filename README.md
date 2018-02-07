@@ -13,7 +13,7 @@ $ npm i react-native-collapse-view
 
 Import the component:
 ```js
-import CollapsingToolbar from 'react-native-collapse-view';
+import CollapseView from 'react-native-collapse-view';
 
 
 <CollapseView 
