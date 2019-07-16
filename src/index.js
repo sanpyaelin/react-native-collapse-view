@@ -19,6 +19,8 @@ class CollapseView extends Component {
     this.state = {
       collapse: this.props.collapse,
       animation: new Animated.Value(),
+      startpoint: null,
+      endpoint: null
     };
   }
 
@@ -56,13 +58,15 @@ class CollapseView extends Component {
 
   render() {
     const { startpoint, endpoint, animation, collapse } = this.state;
+    const height = startpoint !== null && endpoint !== null ? animation : null
+
     return (
-      <Animated.View style={{height: this.state.animation, backgroundColor:'transparent', overflow: 'hidden'}}>
+      <Animated.View style={{height, backgroundColor:'transparent', overflow: 'hidden'}}>
         <TouchableOpacity activeOpacity={1} onPress={this.collapse} onLayout={this.startpoint}>
-          {this.props.renderView(this.state.collapse)}
+          {this.props.renderView(collapse)}
         </TouchableOpacity>
         <View onLayout={this.endpoint}>
-          {this.props.renderCollapseView(this.state.collapse)}
+          {this.props.renderCollapseView(collapse)}
         </View>
       </Animated.View>
     );
