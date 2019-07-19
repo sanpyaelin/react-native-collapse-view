@@ -43,14 +43,14 @@ class CollapseView extends Component {
   }
 
   startpoint = (layout) => {
-    if(!this.state.collapse) this.setState({animation: new Animated.Value(layout.nativeEvent.layout.height)});
+    if(!this.state.collapse) this.setState({animation: new Animated.Value(layout.nativeEvent.layout.height + this.state.endpoint)});
     this.setState({
       startpoint: layout.nativeEvent.layout.height
     })
   }
 
   endpoint = (layout) => {
-    if(this.state.collapse) this.setState({animation: new Animated.Value(layout.nativeEvent.layout.height)});
+    if(this.state.collapse) this.setState({animation: new Animated.Value(layout.nativeEvent.layout.height + this.state.startpoint)});
     this.setState({
       endpoint: layout.nativeEvent.layout.height,
     })
